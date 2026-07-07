@@ -25,7 +25,7 @@ const PropertyDetailPage = () => {
   const [property, setProperty] = useState(null)
   const [loading, setLoading] = useState(true)
   const [currentImage, setCurrentImage] = useState(0)
-  const [isFavorited, setIsFavorited] = useState(false)
+  const [isFavourited, setIsFavourited] = useState(false)
   const [showInquiryForm, setShowInquiryForm] = useState(false)
   const [inquiryData, setInquiryData] = useState({
     name: '',
@@ -229,7 +229,7 @@ const PropertyDetailPage = () => {
             >
               <Heart
                 size={18}
-                className={isFavorited ? 'fill-red-500 text-red-500' : 'text-gray-700'}
+                className={isFavourited ? 'fill-red-500 text-red-500' : 'text-gray-700'}
               />
             </button>
           </div>
