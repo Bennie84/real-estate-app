@@ -92,7 +92,6 @@ const PropertyDetailPage = () => {
         toast.error("Something went wrong");
       }
     }
-     favourit
   }
 
   const handleShare = () => {

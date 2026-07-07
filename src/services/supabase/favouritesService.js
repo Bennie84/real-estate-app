@@ -53,7 +53,7 @@ const isValidUUID = (id) => {
 };
 
 // Add property to favorites
-export const addFavorite = async (userId, propertyId) => {
+export const addFavourite = async (userId, propertyId) => {
   // Don't save dummy properties to favorites
   if (!isValidUUID(propertyId)) {
     throw new Error("Cannot favorite a dummy property");
@@ -68,7 +68,7 @@ export const addFavorite = async (userId, propertyId) => {
 };
 
 // Remove property from favorites
-export const removeFavorite = async (userId, propertyId) => {
+export const removeFavourite = async (userId, propertyId) => {
   if (!isValidUUID(propertyId)) {
     throw new Error("Cannot unfavorite a dummy property");
   }
@@ -91,7 +91,7 @@ export const getUserFavorites = async (userId) => {
 };
 
 // Check if a property is favorited
-export const checkIsFavorited = async (userId, propertyId) => {
+export const checkIsFavourited = async (userId, propertyId) => {
   if (!isValidUUID(propertyId)) return false;
   const { data, error } = await supabase
     .from("favorites")
