@@ -92,8 +92,7 @@ const PropertyDetailPage = () => {
         toast.error("Something went wrong");
       }
     }
-    // setIsFavourited(!isFavourited)
-    // toast.success(isFavourited ? 'Removed from favourites' : 'Added to favourites')
+     favourit
   }
 
   const handleShare = () => {
