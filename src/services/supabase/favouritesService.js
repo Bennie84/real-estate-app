@@ -59,7 +59,7 @@ export const addFavourite = async (userId, propertyId) => {
     throw new Error("Cannot favorite a dummy property");
   }
   const { data, error } = await supabase
-    .from("favorites")
+    .from("favourites")
     .insert([{ user_id: userId, property_id: propertyId }])
     .select()
     .single();
@@ -73,7 +73,7 @@ export const removeFavourite = async (userId, propertyId) => {
     throw new Error("Cannot unfavorite a dummy property");
   }
   const { error } = await supabase
-    .from("favorites")
+    .from("favourites")
     .delete()
     .eq("user_id", userId)
     .eq("property_id", propertyId);
@@ -83,7 +83,7 @@ export const removeFavourite = async (userId, propertyId) => {
 // Get all favorites for a user
 export const getUserFavorites = async (userId) => {
   const { data, error } = await supabase
-    .from("favorites")
+    .from("favourites")
     .select("property_id")
     .eq("user_id", userId);
   if (error) throw error;
@@ -94,7 +94,7 @@ export const getUserFavorites = async (userId) => {
 export const checkIsFavourited = async (userId, propertyId) => {
   if (!isValidUUID(propertyId)) return false;
   const { data, error } = await supabase
-    .from("favorites")
+    .from("favourites")
     .select("id")
     .eq("user_id", userId)
     .eq("property_id", propertyId)

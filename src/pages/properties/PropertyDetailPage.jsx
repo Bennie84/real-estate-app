@@ -2,7 +2,7 @@
 //   return <div className="p-10 text-2xl font-bold">Property Detail Page 🏡</div>;
 // };
 // export default PropertyDetailPage;
-import { addFavourite, removeFavouite, checkIsFavourited} from '../../services/supabase/favouritesService'
+import { addFavourite, removeFavourite, checkIsFavourited} from '../../services/supabase/favouritesService'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
