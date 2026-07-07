@@ -86,7 +86,11 @@ const PropertyDetailPage = () => {
         toast.success('Added to favourites')
       }
     } catch (error) {
-      toast.error('Something went wrong')
+      if (error.message.includes('dummy')) {
+        toast.error('Favourites only work with real properties added by admin')
+      } else {
+        toast.error("Something went wrong");
+      }
     }
     // setIsFavourited(!isFavourited)
     // toast.success(isFavourited ? 'Removed from favourites' : 'Added to favourites')
